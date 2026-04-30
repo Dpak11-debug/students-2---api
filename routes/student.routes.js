@@ -5,6 +5,8 @@ const controller = require("../controllers/student.controller");
 
 router.post("/add", controller.createStudentFull);
 router.get("/all", controller.getStudents);
+router.get("/male", controller.getMaleStudents);
+router.get("/female", controller.getFemaleStudents);
 router.get("/pass", controller.getPassStudents);
 router.get("/fail", controller.getFailStudents);
 router.get("/topper", controller.getTopperStudents);

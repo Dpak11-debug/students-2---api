@@ -18,3 +18,10 @@ exports.createStudent = async (data) => {
 exports.getAllStudents = async () => {
     return db.execute("SELECT * FROM students");
 };
+
+exports.getMaleStudents = async () => {
+    return db.execute("SELECT * FROM students WHERE gender = 'Male'");
+};
+exports.getFemaleStudents = async () => {
+    return db.execute("SELECT * FROM students WHERE gender = 'Female'");
+}

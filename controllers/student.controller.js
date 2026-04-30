@@ -45,6 +45,24 @@ exports.getStudents = async (req, res) => {
     }
 };
 
+exports.getMaleStudents = async (req, res) => {
+    try {
+        const [data] = await Student.getMaleStudents();
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+exports.getFemaleStudents = async (req, res) => {
+    try {
+        const [data] = await Student.getFemaleStudents();
+        res.json(data);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
 const Report = require("../models/report.model");
 
 exports.getPassStudents = async (req, res) => {
